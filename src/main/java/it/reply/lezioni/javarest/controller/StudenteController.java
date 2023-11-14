@@ -23,9 +23,4 @@ public class StudenteController {
     public List<Studente> findAllStudenti() {
         return studenteService.getStudentiHardCoded();
     }
-
-    @GetMapping("/findAllStudentiFromFile")
-    public List<Studente> findAllStudentiFromFile(@RequestParam("filePath") String filePath) {
-        return studenteService.getStudentiFromFile(filePath);
-    }
 }

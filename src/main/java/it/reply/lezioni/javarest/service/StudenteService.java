@@ -29,31 +29,26 @@ public class StudenteService {
         Studente studente = new Studente("Alessio", "Mazzola", "MZZLSS");
         Studente studente2 = new Studente("Gennaro", "Bullo", "GNRBLL");
         Studente studente3 = new Studente("Claudia", "Breazzano", "CLDBR");
-        Studente studente4 = new Studente("Alessio", "Mazzola2", "MZZLSS");
-        Studente studente5 = new Studente("Stefano", "Rossi", "");
+        Studente studente4 = new Studente("Alessio", "De Angelis", "ANGLSS");
+        Studente studente5 = new Studente("Stefano", "Rossi", "STFRBBF");
+        Studente studente6 = new Studente("Silvia", "Di Lauro", "SLVLSS");
+        Studente studente7 = new Studente("Edoardo", "Rubino", "EDRBN");
+        Studente studente8 = new Studente("Antonino", "Papillo", "PPPPP");
+        Studente studente9 = new Studente("Fabio", "Cannarozzo", "FBCNZ");
+        Studente studente10 = new Studente("Ilaria", "Salvetti", "ILRSLV");
 
         retList.add(studente);
         retList.add(studente2);
         retList.add(studente3);
         retList.add(studente4);
         retList.add(studente5);
+        retList.add(studente6);
+        retList.add(studente7);
+        retList.add(studente8);
+        retList.add(studente9);
+        retList.add(studente10);
         log.info("-----GENERAZIONE DEGLI STUDENTI COMPLETATA-----");
         return retList;
     }
 
-    public List<Studente> getStudentiFromFile(String filePath){
-        log.info("-----GENERAZIONE DEGLI STUDENTI TRAMITE FILE {}-----", filePath);
-
-        String jsonContent = "";
-        try {
-            jsonContent = Files.readString(Path.of(filePath), StandardCharsets.UTF_8);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
-        List<Studente> retList = new Gson().fromJson(jsonContent, List.class);
-        log.info("-----GENERAZIONE DEGLI STUDENTI COMPLETATA-----");
-        return retList;
-    }
 }

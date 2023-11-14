@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class Studente {
 
     private String nome;
-    private String congome;
+    private String cognome;
     private String codiceFiscale;
 
 }
